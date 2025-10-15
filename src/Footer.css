@@ -1,0 +1,12 @@
+.footer {
+  background: #333;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+.footer-columns {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+.footer-columns a { color: #fff; text-decoration: none; }

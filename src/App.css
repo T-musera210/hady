@@ -1,38 +1,97 @@
-.App {
-  text-align: center;
+/* Reset default margins */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #fff; /* clean white base */
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Layout wrapper */
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  min-height: 100vh;
+}
+
+/* Content grows to push footer down */
+.content {
+  flex: 1;
+}
+
+/* Hero Section */
+.hero {
+  background: #fafafa; /* soft light section */
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto 25px;
+}
+
+.shop-btn {
+  background: black;
   color: white;
+  border: none;
+  padding: 12px 30px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.shop-btn:hover {
+  background: #444;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Products */
+.products {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 60px 20px;
+}
+
+.product {
+  text-align: center;
+  max-width: 300px;
+}
+
+/* .product img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 15px;
+} */
+
+.product img {
+  width: 90%;
+  height: 60%;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+
+.product h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+/* Footer */
+footer {
+  background: #fafafa; /* same as hero */
+  color: #666;
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #eaeaea;
 }
