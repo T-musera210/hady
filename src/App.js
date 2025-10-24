@@ -1,99 +1,56 @@
+// App.js
 import React from 'react';
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
+import Product from './Product'; // ✅ Import the Product component
 
 function App() {
+  // ✅ Sample product data - we will use this for now
+  const jeansProducts = [
+    { id: 1, title: "Blue Denim Jeans", price: 1000, image: "/jeans.jpg" },
+    { id: 2, title: "Slim Fit Jeans", price: 1200, image: "/jeans1.jpg" },
+    { id: 3, title: "Black Diesel Jeans", price: 1500, image: "/jeans2.jpg" }
+  ];
+
+  const shoesProducts = [
+    { id: 4, title: "White Sneakers", price: 2500, image: "/shoes.jpg" },
+    { id: 5, title: "Brown Loafers", price: 3000, image: "/shoes1.jpg" },
+    { id: 6, title: "Black Official Shoes", price: 2800, image: "/shoes2.jpg" }
+  ];
+
+  // ✅ Smooth scrolling to products section
   const scrollToProducts = () => {
     document.getElementById("products").scrollIntoView({ behavior: "smooth" });
   };
 
   return (
     <div className="app-container">
+      {/* ✅ Header stays at the top */}
       <Header />
 
       <main className="content">
-        {/* Hero Section */}
+        {/* ✅ Hero / Intro section */}
         <section className="hero">
           <h1>New Collections</h1>
-          <p>
-            Discover our latest fashion arrivals. Stylish, trendy, and perfect for every occasion.
-          </p>
-          <button className="shop-btn" onClick={scrollToProducts}>
-            Shop Now
-          </button>
+          <p>Discover our latest fashion arrivals. Stylish, trendy, and perfect for every occasion.</p>
+          <button className="shop-btn" onClick={scrollToProducts}>Shop Now</button>
         </section>
 
-        {/* Products Section */}
-        <section id="products" className="products">
-          {/* Jeans/Denim section*/}
-          <div className="product">
-            <img src="/jeans.jpg" alt="Denim" />
-            <h3>Denim</h3>
-            <p>Kes 1000</p>
-          </div>
+        {/* ✅ Products Section */}
+        <section id="products">
+          <h2 className="category-title">Jeans Collection</h2>
+          {/* ✅ Pass jeans data to Product component */}
+          <Product products={jeansProducts} />
 
-          <div className="product">
-            <img src="/jeans1.jpg" alt="Denim" />
-            <h3>Denim</h3>
-            <p>Kes 1000</p>
-          </div>
-
-          <div className="product">
-            <img src="/jeans2.jpg" alt="Denim" />
-            <h3>Denim</h3>
-            <p>Kes 1000</p>
-          </div>
-
-          <div className="product">
-            <img src="/jeans3.jpg" alt="Denim" />
-            <h3>Denim</h3>
-            <p>Kes 1000</p>
-          </div>
-
-          <div className="product">
-            <img src="/jeans4.jpg" alt="Denim" />
-            <h3>Denim</h3>
-            <p>Kes 1000</p>
-          </div>
-        </section>
-
-        {/* Shoes Section */}
-        <section className="products">
-          <div className="product">
-            <img src="/shoes.jpg" alt="Official" />
-            <h3>Official</h3>
-            <p>Kes 2500</p>
-          </div>
-
-          <div className="product">
-            <img src="/shoes1.jpg" alt="Loafers" />
-            <h3>Loafers</h3>
-            <p>Kes 3000</p>
-          </div>
-
-          <div className="product">
-            <img src="/shoes2.jpg" alt="Sneakers" />
-            <h3>Sneakers</h3>
-            <p>Kes 3500</p>
-          </div>
-
-          <div className="product">
-            <img src="/shoes3.jpg" alt="Sandals" />
-            <h3>Sandals</h3>
-            <p>Kes 1500</p>
-          </div>
-
-          <div className="product">
-            <img src="/shoes4.jpg" alt="Sneakers" />
-            <h3>Sneakers</h3>
-            <p>Kes 1500</p>
-          </div>
+          <h2 className="category-title">Shoes Collection</h2>
+          {/* ✅ Pass shoes data to Product component */}
+          <Product products={shoesProducts} />
         </section>
       </main>
 
+      {/* ✅ Footer stays at the bottom */}
       <Footer />
-    
     </div>
   );
 }
