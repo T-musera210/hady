@@ -10,13 +10,18 @@ function App() {
   const jeansProducts = [
     { id: 1, title: "Blue Denim Jeans", price: 1000, image: "/jeans.jpg" },
     { id: 2, title: "Slim Fit Jeans", price: 1200, image: "/jeans1.jpg" },
-    { id: 3, title: "Black Diesel Jeans", price: 1500, image: "/jeans2.jpg" }
+    { id: 3, title: "Black Diesel Jeans", price: 1500, image: "/jeans2.jpg" },
+    { id: 4, title: "Black Diesel Jeans", price: 1500, image: "/jeans3.jpg" },
+    { id: 5, title: "Black Diesel Jeans", price: 1500, image: "/jeans4.jpg" }
+    
   ];
 
   const shoesProducts = [
     { id: 4, title: "White Sneakers", price: 2500, image: "/shoes.jpg" },
     { id: 5, title: "Brown Loafers", price: 3000, image: "/shoes1.jpg" },
-    { id: 6, title: "Black Official Shoes", price: 2800, image: "/shoes2.jpg" }
+    { id: 6, title: "Black Official Shoes", price: 2800, image: "/shoes2.jpg" },
+    { id: 7, title: "Black Official Shoes", price: 2800, image: "/shoes3.jpg" },
+    { id: 8, title: "Black Official Shoes", price: 2800, image: "/shoes4.jpg" }
   ];
 
   // ✅ Smooth scrolling to products section
